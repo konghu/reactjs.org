@@ -329,7 +329,7 @@ class WordAdder extends React.Component {
 }
 ```
 
-The problem is that `PureComponent` will do a simple comparison between the old and new values of `this.props.words`. Since this code mutates the `words` array in the `handleClick` method of `WordAdder`, the old and new values of `this.props.words` will compare as equal, even though the actual words in the array have changed. The `ListOfWords` will thus not update even though it has new words that should be rendered.
+The problem is that `PureComponent` will do a simple comparison between the old and new values of `this.state.words`. Since this code mutates the `words` array in the `handleClick` method of `WordAdder`, the old and new values of `this.state.words` will compare as equal, even though the actual words in the array have changed. The `ListOfWords` will thus not update even though it has new words that should be rendered.
 
 ## The Power Of Not Mutating Data {#the-power-of-not-mutating-data}
 
